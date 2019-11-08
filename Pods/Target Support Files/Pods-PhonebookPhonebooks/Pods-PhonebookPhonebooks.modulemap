@@ -1,0 +1,6 @@
+framework module Pods_PhonebookPhonebooks {
+  umbrella header "Pods-PhonebookPhonebooks-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -14,18 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        guard let windowScene = scene as? UIWindowScene else { return }
-        window = UIWindow(windowScene: windowScene)
-        
-        let mainViewController = MainViewController()
-        let favoritesViewController = FavoritesViewController()
-        let tabBarController = UITabBarController()
-        let navigationController = UINavigationController(rootViewController: mainViewController)
-        tabBarController.viewControllers = [navigationController, favoritesViewController]
-        navigationController.tabBarItem = UITabBarItem(title: "Contacts list", image: UIImage(named: "ListIcon"), tag: 0)
-        favoritesViewController.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(named: "FavoritesIcon"), tag: 1)
-        window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
+        guard scene is UIWindowScene else { return }        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

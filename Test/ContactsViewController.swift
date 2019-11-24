@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class ContactsViewController: ViewController {
     let contacts: [Contact]? = FakeDb.getInstance().getTable()?.sorted { $0.name < $1.name }
     var categories: [String: [Contact]] = [:]
     var categoriesKeys: [String] = []
     
-    @IBOutlet weak var contactsTableView: UITableView!
+    @IBOutlet weak var contactsTableView: UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
         title = "Contacts list"
         
         let contactCell = UINib(nibName: "ContactTableViewCell", bundle: nil)
-        contactsTableView.register(contactCell, forCellReuseIdentifier: "contactCell")
+        contactsTableView?.register(contactCell, forCellReuseIdentifier: "contactCell")
         
         contacts?.forEach { contact in
             let firstChar = contact.name.first!.uppercased()
@@ -34,7 +34,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let contact: Contact =  categories[categoriesKeys[indexPath.section]]![indexPath.row]

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactDetailsViewController: UIViewController {
+class ContactDetailsViewController: ViewController {
     var contact: Contact?
     
     @IBOutlet weak var avatarImage: UIImageView!

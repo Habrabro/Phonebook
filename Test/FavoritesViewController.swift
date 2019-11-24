@@ -8,12 +8,13 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
+class FavoritesViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Favorites"
+        tabBarItem.image = UIImage(named: "FavoritesIcon")
     }
 
 

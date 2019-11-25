@@ -7,26 +7,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Favorites View Controller-->
         <scene sceneID="BHO-4h-eNR">
             <objects>
-                <viewController id="MWX-Xj-ojh" customClass="FavoritesViewController" customModule="Phonebook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MWX-Xj-ojh" userLabel="Favorites View Controller" customClass="FavoritesViewController" customModule="Phonebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OPu-7P-b6e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="EFn-nA-bGw"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="IZA-rH-Fg1"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="FavoritesIcon" id="IZA-rH-Fg1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZ2-KU-qFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="420" y="276"/>
         </scene>
-        <!--Item 1-->
+        <!--Contacts View Controller-->
         <scene sceneID="WsE-t2-Qf3">
             <objects>
-                <viewController id="hUx-lp-5uv" customClass="ContactsViewController" customModule="Phonebook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hUx-lp-5uv" userLabel="Contacts View Controller" customClass="ContactsViewController" customModule="Phonebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DIr-Mg-JHX" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,11 +69,11 @@
             </objects>
             <point key="canvasLocation" x="1294" y="-368"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="wmA-yM-hNv">
             <objects>
-                <navigationController id="OBX-ic-DuI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Gnk-Fh-BJY"/>
+                <navigationController id="OBX-ic-DuI" userLabel="Navigation Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contact" image="ListIcon" id="Gnk-Fh-BJY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TDu-Fu-Cn8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -96,8 +96,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="MWX-Xj-ojh" kind="relationship" relationship="viewControllers" id="pif-l1-X7A"/>
                         <segue destination="OBX-ic-DuI" kind="relationship" relationship="viewControllers" id="IL9-1F-44n"/>
+                        <segue destination="MWX-Xj-ojh" kind="relationship" relationship="viewControllers" id="pif-l1-X7A"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lX2-ts-116" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -105,4 +105,8 @@
             <point key="canvasLocation" x="-500" y="-49"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FavoritesIcon" width="32" height="32"/>
+        <image name="ListIcon" width="32" height="32"/>
+    </resources>
 </document>

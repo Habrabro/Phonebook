@@ -11,29 +11,29 @@ import UIKit
 class ContactDetailsViewController: ViewController {
     var contact: Contact?
     
-    @IBOutlet weak var avatarImage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var homePhoneNumberLabel: UILabel!
-    @IBOutlet weak var mobilePhoneNumberLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var avatarImage: UIImageView?
+    @IBOutlet weak var nameLabel: UILabel?
+    @IBOutlet weak var homePhoneNumberLabel: UILabel?
+    @IBOutlet weak var mobilePhoneNumberLabel: UILabel?
+    @IBOutlet weak var emailLabel: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = contact?.name
         
-        nameLabel.text = contact?.name
+        nameLabel?.text = contact?.name
         if let mobilePhoneNumber = contact?.mobilePhoneNumber {
-            mobilePhoneNumberLabel.text = "📱 " + mobilePhoneNumber
+            mobilePhoneNumberLabel?.text = "📱 " + mobilePhoneNumber
         }
         if let homePhoneNumber = contact?.homePhoneNumber {
-            homePhoneNumberLabel.text = "☎️ " + homePhoneNumber
+            homePhoneNumberLabel?.text = "☎️ " + homePhoneNumber
         }
         if let email = contact?.email {
-            emailLabel.text = "📧 " + email
+            emailLabel?.text = "📧 " + email
         }
         if let image = contact?.image {
-            avatarImage.image = image
+            avatarImage?.image = image
         }
     }
 

@@ -50,21 +50,29 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactTableViewCell
         let contact: Contact =  categories[categoriesKeys[indexPath.section]]![indexPath.row]
         
-        cell.nameLabel.text = contact.name
+        cell.nameLabel?.text = contact.name
+        
+        let mobilePhoneNumberLabel : UILabel? = cell.mobilePhoneNumberLabel
         if let mobilePhoneNumber = contact.mobilePhoneNumber {
-            cell.mobilePhoneNumberLabel.text = "📱 " + mobilePhoneNumber
+            mobilePhoneNumberLabel?.text = "📱 " + mobilePhoneNumber
+            mobilePhoneNumberLabel?.isHidden = false
         } else {
-            cell.mobilePhoneNumberLabel.text = nil
+            mobilePhoneNumberLabel?.isHidden = true
         }
+        
+        let homePhoneNumberLabel : UILabel? = cell.homePhoneNumberLabel
         if let homePhoneNumber = contact.homePhoneNumber {
-            cell.homePhoneNumberLabel.text = "☎️ " + homePhoneNumber
+            homePhoneNumberLabel?.text = "☎️ " + homePhoneNumber
+            homePhoneNumberLabel?.isHidden = false
         } else {
-            cell.homePhoneNumberLabel.text = nil
+            homePhoneNumberLabel?.isHidden = true
         }
+        
+        let avatarImage : UIImageView? = cell.avatarImage
         if let image = contact.image {
-            cell.avatarImage.image = image
+            avatarImage?.image = image
         } else {
-            cell.avatarImage.image = UIImage(named: "DefaultAvatar")
+            avatarImage?.image = UIImage(named: "DefaultAvatar")
         }
 
         return cell

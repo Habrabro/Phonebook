@@ -33,28 +33,28 @@
                             </constraints>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WLv-KB-JFq">
-                            <rect key="frame" x="0.0" y="148" width="374" height="218"/>
+                            <rect key="frame" x="0.0" y="148" width="61" height="132"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ4-Xo-8Bu">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="38"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ4-Xo-8Bu">
+                                    <rect key="frame" x="0.0" y="0.0" width="61" height="30"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvM-1j-d8q">
-                                    <rect key="frame" x="0.0" y="48" width="374" height="50"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvM-1j-d8q">
+                                    <rect key="frame" x="0.0" y="40" width="61" height="24"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOf-pW-NoG">
-                                    <rect key="frame" x="0.0" y="108" width="374" height="50"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOf-pW-NoG">
+                                    <rect key="frame" x="0.0" y="74" width="61" height="24"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuB-dX-UUG">
-                                    <rect key="frame" x="0.0" y="168" width="374" height="50"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuB-dX-UUG">
+                                    <rect key="frame" x="0.0" y="108" width="61" height="24"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -66,10 +66,8 @@
                     <constraints>
                         <constraint firstItem="62I-pX-FH2" firstAttribute="centerX" secondItem="Rzu-Cj-5Kh" secondAttribute="centerX" id="78k-HU-rmj"/>
                         <constraint firstItem="62I-pX-FH2" firstAttribute="top" secondItem="Rzu-Cj-5Kh" secondAttribute="top" id="9FN-cp-DkI"/>
-                        <constraint firstAttribute="trailing" secondItem="WLv-KB-JFq" secondAttribute="trailing" id="Bbe-R8-jXQ"/>
-                        <constraint firstItem="WLv-KB-JFq" firstAttribute="top" secondItem="62I-pX-FH2" secondAttribute="bottom" constant="20" id="Efs-d9-Q3A"/>
-                        <constraint firstItem="WLv-KB-JFq" firstAttribute="leading" secondItem="Rzu-Cj-5Kh" secondAttribute="leading" id="fOz-ac-7ui"/>
-                        <constraint firstAttribute="bottom" secondItem="WLv-KB-JFq" secondAttribute="bottom" id="xqd-cm-3mH"/>
+                        <constraint firstItem="WLv-KB-JFq" firstAttribute="leading" secondItem="Rzu-Cj-5Kh" secondAttribute="leading" id="Svv-sk-7ne"/>
+                        <constraint firstItem="WLv-KB-JFq" firstAttribute="top" secondItem="Rzu-Cj-5Kh" secondAttribute="top" constant="148" id="dM6-Ms-erF"/>
                     </constraints>
                 </view>
             </subviews>

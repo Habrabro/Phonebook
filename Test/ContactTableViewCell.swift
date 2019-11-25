@@ -10,10 +10,10 @@ import UIKit
 
 class ContactTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var mobilePhoneNumberLabel: UILabel!
-    @IBOutlet weak var homePhoneNumberLabel: UILabel!
-    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel?
+    @IBOutlet weak var mobilePhoneNumberLabel: UILabel?
+    @IBOutlet weak var homePhoneNumberLabel: UILabel?
+    @IBOutlet weak var avatarImage: UIImageView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,5 +25,4 @@ class ContactTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

@@ -16,6 +16,8 @@ class ContactDetailsViewController: ViewController {
     @IBOutlet weak var homePhoneNumberLabel: UILabel?
     @IBOutlet weak var mobilePhoneNumberLabel: UILabel?
     @IBOutlet weak var emailLabel: UILabel?
+    @IBOutlet weak var addressLabel: UILabel?
+    @IBOutlet weak var additionalInfoLabel: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +27,39 @@ class ContactDetailsViewController: ViewController {
         nameLabel?.text = contact?.name
         if let mobilePhoneNumber = contact?.mobilePhoneNumber {
             mobilePhoneNumberLabel?.text = "📱 " + mobilePhoneNumber
+            mobilePhoneNumberLabel?.isHidden = false
+        } else {
+            mobilePhoneNumberLabel?.isHidden = true
         }
+        
         if let homePhoneNumber = contact?.homePhoneNumber {
             homePhoneNumberLabel?.text = "☎️ " + homePhoneNumber
+            homePhoneNumberLabel?.isHidden = false
+        } else {
+            homePhoneNumberLabel?.isHidden = true
         }
+        
         if let email = contact?.email {
             emailLabel?.text = "📧 " + email
+            emailLabel?.isHidden = false
+        } else {
+            emailLabel?.isHidden = true
         }
+        
+        if let address = contact?.address {
+            addressLabel?.text = "🏠 " + address
+            addressLabel?.isHidden = false
+        } else {
+            addressLabel?.isHidden = true
+        }
+        
+        if let additionalInfo = contact?.additionalInfo {
+            additionalInfoLabel?.text = "ℹ " + additionalInfo
+            additionalInfoLabel?.isHidden = false
+        } else {
+            additionalInfoLabel?.isHidden = true
+        }
+        
         if let image = contact?.image {
             avatarImage?.image = image
         }

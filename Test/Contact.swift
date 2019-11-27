@@ -14,4 +14,6 @@ struct Contact {
     var mobilePhoneNumber: String?
     var email: String?
     var image: UIImage?
+    var address: String?
+    var additionalInfo: String?
 }
